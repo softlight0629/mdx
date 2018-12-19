@@ -1,0 +1,47 @@
+@import '~@/style/parameters.less';
+@import '~@/style/form-common.less';
+
+.form-pro {
+  .ant-btn-full {
+    width: 100%;
+  }
+
+  .ant-input,
+  .ant-cascader-picker,
+  .ant-select {
+    font-size: 16px;
+  }
+
+  .ant-cascader-picker {
+    text-align: left;
+  }
+
+  .ant-input-prefix {
+    font-size: 16px;
+    color: @text-color-third;
+  }
+
+  .ant-input-affix-wrapper .ant-input:not(:first-child) {
+    padding-left: 32px;
+  }
+
+  .ant-form-explain {
+    margin-top: 4px;
+    text-align: left;
+  }
+
+  .ant-form-item {
+    &.ant-form-item-custom {
+      .ant-form-explain {
+        display: none;
+      }
+      .ant-form-explain-custom {
+        display: block;
+      }
+    }
+  }
+
+  .lark-formitem-hidden {
+    display: none;
+  }
+}

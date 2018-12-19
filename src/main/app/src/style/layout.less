@@ -1,0 +1,39 @@
+@import '~@/style/parameters.less';
+
+.layout-container {
+  // call mixin functions
+  .set-container-width;
+  height: 100%;
+}
+.layout-container-wider {
+  .set-container-width(@container-width-wider);
+  height: 100%;
+}
+.layout-container-middle {
+  .set-container-width(@container-width-middle);
+  height: 100%;
+}
+
+.lark {
+  position: relative;
+  background: #fff;
+  margin: 0 auto;
+}
+
+.main-wrapper {
+  width: 100%;
+  min-height: ~"calc(100vh - 60px - 54px)";
+  background: @background-color;
+}
+
+.main-container {
+  .set-container-width;
+  padding-top: 24px;
+  padding-bottom: 32px;
+}
+
+.main-container-wider {
+  .set-container-width(@container-width-wider);
+  padding-top: 24px;
+  padding-bottom: 32px;
+}

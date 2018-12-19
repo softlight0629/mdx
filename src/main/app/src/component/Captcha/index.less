@@ -1,0 +1,56 @@
+@import '~@/style/parameters.less';
+
+.captcha {
+  margin-bottom: 16px;
+  .nc-container {
+    border-radius: 4px;
+    overflow: hidden;
+    .nc_wrapper, #nc_1_wrapper {
+      width: 320px;
+      .nc_scale {
+        height: 40px;
+        background: @border-color;
+        .nc_bg {
+          width: 0;
+          background-color: @primary-5;
+        }
+        .scale_text {
+          color: @text-color;
+          font-size: 16px;
+        }
+        .scale_text2 {
+          color: white;
+          font-size: 16px;
+        }
+        span {
+          border: none;
+          height: 40px;
+          line-height: 40px;
+          border-radius: 4px;
+          &.btn_slide {
+            border: 1px solid #d9d9d9;
+          }
+          &.btn_ok {
+            border: 1px solid #d9d9d9;
+            border-radius: 0 4px 4px 0;
+            color: @primary-5;
+          }
+        }
+      }
+    }
+    .errloading {
+      width: 100%;
+      height: 40px;
+      line-height: 22px;
+      border-radius: 4px;
+      border: 1px solid @warning-color;
+      .nc_iconfont {
+        color: @error-color;
+      }
+      span {
+        color: @warning-color;
+        font-size: 14px;
+      }
+    }
+  }
+}

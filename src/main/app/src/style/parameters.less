@@ -1,0 +1,149 @@
+/*
+* ============================================
+* PARAMETERS BASED ON ANTD
+* Please be careful to modify this file.
+* Any modification may cause global changes in our site.
+* ============================================
+*/
+
+@import "~@/style/colors.less";
+@import "~@/style/mixins.less";
+@import "~@/style/animation.less";
+
+
+// colors
+@primary-color          : @primary-6;
+@info-color             : #1890ff;
+@success-color          : #52c41a;
+@processing-color       : @primary-color;
+@error-color            : #f5222d;
+@highlight-color        : #f5222d;
+@warning-color          : #faad14;
+@normal-color           : #d9d9d9;
+
+@doc-type-color         : #0971E0;
+@design-type-color      : #FFC53D;
+@sheet-type-color       : #26BF69;
+
+// link for text
+@link-color             : #096DD9;
+@link-hover-color       : #1890FF;
+@link-focus-color       : #0050B3;
+
+// link for list item
+@list-link-color        : @grey-9; // #262626
+@list-link-hover-color  : @grey-7;
+@list-link-focus-color  : @grey-10;
+
+
+// text
+@heading-color          : @grey-9; // #262626
+@text-color             : @grey-8; // #595959
+@text-color-secondary   : @grey-7; // #8C8C8C
+@text-color-third       : @grey-6; // #BFBFBF
+
+
+// background
+// TODO: find all background usage in lark
+@background-color       : @grey-2; // #FAFAFA
+@background-color-medium: @grey-3; // #F5F5F5
+@nav-dark-color         : #292e33;
+@dropmenu-hover-background-color: @primary-1;
+
+
+// border
+@border-color           : @grey-4; // #E8E8E8
+@border-color-medium    : @grey-5; // #d9d9d9
+@border-radius          : 4px;
+@border-radius-sm       : 2px; // border radius for card layout component
+
+
+// font
+@font-family            : ~"'Chinese Quote', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif";
+@code-family            : Consolas, Menlo, Courier, monospace;
+@font-size              : 14px;
+@font-size-lg           : @font-size + 2px;
+@font-size-sm           : @font-size - 2px;
+@line-height            : 1.5;
+
+
+// disabled states
+@disabled-color         : @grey-6; // #BFBFBF
+@disabled-bg            : @background-color;
+
+
+// btns
+@btn-height-base        : 32px;
+
+
+// zindex
+@zindex                 : 200;
+@top-zindex             : 999;
+@zindex-normal          : 1;
+@zindex-header          : @top-zindex;
+@z-index-editor-tip     : 1000;
+
+// zindex of antd components
+@zindex-affix           : 10;
+@zindex-back-top        : @top-zindex;
+@zindex-modal-mask      : 1000;
+@zindex-modal           : 1000;
+@zindex-notification    : 1010;
+@zindex-message         : 1010;
+@zindex-popover         : 1030;
+@zindex-picker          : 1050;
+@zindex-dropdown        : 1050;
+@zindex-tooltip         : 1060;
+@zindex-draft-tip       : 1000;
+
+
+// container width
+@container-width        : 1024px + 32;
+@container-width-middle  : 1216px;
+@container-width-wider  : 1440px;
+
+
+// padding
+@padding-base           : 16px;
+
+
+// Animation
+@ease-in-out            : cubic-bezier(0.645, 0.045, 0.355, 1);
+
+
+// Shadow
+@shadow-color           : rgba(0, 0, 0, .15);
+@shadow-1-down          : 0 2px 8px @shadow-color;
+
+
+// Media queries breakpoints
+// Extra small screen / phone
+@screen-xs              : 480px;
+@screen-xs-min          : @screen-xs;
+
+// Small screen / tablet
+@screen-sm              : 576px;
+@screen-sm-min          : @screen-sm;
+
+// Medium screen / desktop
+@screen-md              : 768px;
+@screen-md-min          : @screen-md;
+
+// Large screen / wide desktop
+@screen-lg              : 992px;
+@screen-lg-min          : @screen-lg;
+
+// Extra large screen / full hd
+@screen-xl              : 1200px;
+@screen-xl-min          : @screen-xl;
+
+// Extra extra large screen / large descktop
+@screen-xxl              : 1600px;
+@screen-xxl-min          : @screen-xxl;
+
+// provide a maximum
+@screen-xs-max          : (@screen-sm-min - 1px);
+@screen-sm-max          : (@screen-md-min - 1px);
+@screen-md-max          : (@screen-lg-min - 1px);
+@screen-lg-max          : (@screen-xl-min - 1px);
+@screen-xl-max          : (@screen-xxl-min - 1px);

@@ -1,0 +1,58 @@
+@import '~@/style/parameters.less';
+
+.form .ant-card,
+.form-container .ant-card {
+  margin-bottom: @padding-base;
+}
+
+.card-form {
+  > .ant-card-head {
+    border-bottom: none;
+  }
+
+  .card-form-title {
+    font-size: 24px;
+    line-height: 2;
+    color: #262626;
+    font-weight: bold;
+  }
+}
+
+.ant-form {
+  .ant-form-item {
+    margin-bottom: 16px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  
+  .ant-form-item-required:before {
+    display: none;
+  }
+
+  .ant-form-item-label .tip {
+    font-size: @font-size-sm;
+    color: @text-color-secondary;
+  }
+
+  .ant-form-explain {
+    clear: both;
+  }
+}
+
+.ant-form-extra {
+  font-size: @font-size-sm;
+
+  .lark-btn-text {
+    color: @link-color;
+
+    &:hover {
+      color: @link-hover-color;
+    }
+
+    &:focus {
+      color: @link-focus-color;
+    }
+  }
+}

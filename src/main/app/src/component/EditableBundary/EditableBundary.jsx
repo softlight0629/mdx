@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { observer, inject } from 'mobx-react';
 
+import './EditableBundary.less';
+
 @inject('inspectorStore')
 @observer
 class EditableBundary extends Component {

@@ -1,25 +1,31 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Switch, Route } from 'react-router';
+import { bundles } from '@/common/bundles';
+import { inject } from 'mobx-react';
+import { flatten } from 'lodash/flatten';
 
+@inject('accountStore')
 class App extends Component {
+
+  componentDidMount() {
+    this.props.accountStore.doLogin();
+  }
+
   render() {
+    const routes = [];
+    bundles.forEach(bundle => {
+      const r = bundle.router;
+      r.forEach(route => routes.push(<Route exact={route.exact} path={route.path} component={route.component} />))
+    });
+
+    console.log(routes);
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <div className="app">
+        <Switch>
+          {
+            routes
+          }
+        </Switch>
       </div>
     );
   }

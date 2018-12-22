@@ -1,0 +1,63 @@
+@import '~@/style/formpro.less';
+@import '~@/style/parameters.less';
+
+.qr-form {
+  padding-top: 96px;
+  width: 430px;
+  margin: auto;
+
+  .ant-form-item {
+    margin-bottom: 16px;
+  }
+
+  &-main {
+    background-color: #fff;
+    padding: 56px 8px 72px;
+    margin-bottom: 64px;
+
+    border: 1px solid rgb(240, 227, 227);
+    border-radius: @border-radius;
+    .qr-form-logo {
+      max-width: 320px;
+      margin: 0 auto;
+      text-align: center;
+      padding-bottom: 24px;
+
+      img {
+        width: 56px;
+        height: 56px;
+      }
+    }
+    .qr-form-content {
+      max-width: 320px;
+      margin: 0 auto;
+      border-radius: 4px;
+      font-size: 14px;
+      text-align: center;
+
+      .account-slogon {
+        margin-bottom: 32px;
+
+        &-main {
+          font-size: 24px;
+          line-height: 32px;
+          color: @heading-color;
+        }
+
+        &-subhead {
+          color: @text-color;
+          margin-top: 12px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .qr {
+    .qr-form {
+      width: 100%;
+      padding-top: 16px;
+    }
+  }
+}

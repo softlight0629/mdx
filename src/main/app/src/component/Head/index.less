@@ -1,0 +1,63 @@
+@import '~@/style/parameters.less';
+
+.header {
+  position: relative;
+  z-index: @zindex-header;
+  width: 100%;
+  height: 60px;
+  background: #fff;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+
+  &-nav {
+    display: flex;
+    align-items: center;
+    height: 100%;
+
+    &-left {
+      float: left;
+    }
+
+    &-right {
+      float: right;
+    }
+
+    &-list {
+      display: flex;
+      align-items: center;
+    }
+
+    &-center {
+      margin-left: 16px;
+    }
+
+    &-item {
+      padding: 0 10px;
+      color: @text-color;
+      line-height: 24px;
+
+      &&-link {
+        line-height: 24px;
+      }
+
+      a {
+        position: relative;
+        font-size: 14px;
+        color: @text-color;
+        display: block;
+
+        &.active {
+          color: @heading-color;
+        }
+
+        &:hover {
+          color: @text-color-secondary;
+        }
+      }
+    }
+  }
+
+  .logo {
+    float: left;
+    margin-right: 40px;
+  }
+}

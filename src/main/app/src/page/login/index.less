@@ -1,0 +1,79 @@
+@import '~@/style/common.less';
+@import '~@/style/responsive.less';
+.qr.page-account {
+  background-color: @background-color;
+}
+
+.qr-login .qr-form {
+  padding-top: 96px;
+}
+
+.account-login {
+  margin-top: 36px;
+  .split {
+    color: @text-color-third;
+    padding: 0 8px;
+  }
+  .forgot-link {
+    font-size: 14px;
+    border-left: 1px solid @border-color;
+    padding-left: 12px;
+    padding-right: 5px;
+    a {
+      color: @text-color-secondary;
+    }
+  }
+  &-bottom {
+    margin-top: 24px;
+    a {
+      display: inline-block;
+    }
+    span.icon-dingtalk {
+      width: 20px;
+      height: 20px;
+      background-image: url('https://gw.alipayobjects.com/zos/rmsportal/iSBYXPhvTkwhjYUQVMLG.png');
+      background-position: 0 -21px;
+      background-size: 100%;
+      margin-right: 8px;
+      float: left;
+    }
+  }
+  .ant-form-item .login-password-input .ant-input {
+    padding-right: 104px;
+  }
+}
+
+.qr-form-main .qr-form-content .account-slogon {
+  margin-bottom: 0;
+}
+
+.dingtalk-login {
+  #dingtalk_login_container {
+    height: 316px;
+  }
+}
+
+.login-result {
+  img {
+    width: 240px;
+    margin-top: 36px;
+  }
+  &-failed {
+    margin-top: 24px;
+    font-weight: bold;
+  }
+  &-countdown {
+    color: @text-color-secondary;
+    margin-top: 36px;
+  }
+}
+
+.bind-mobile {
+  margin-top: 36px;
+  label {
+    text-align: left;
+    font-weight: bold;
+    color: #8A8A8A;
+    font-size: 14px;
+  }
+}

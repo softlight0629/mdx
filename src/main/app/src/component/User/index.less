@@ -1,0 +1,122 @@
+@import '~@/style/parameters.less';
+
+.header-user {
+  position: relative;
+  padding-right: 16px;
+  cursor: pointer;
+  img {
+    display: block;
+    width: 32px;
+    height: 32px;
+    border-radius: 32px 32px;
+  }
+
+  .qricon-triangle-down {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%) scale(0.5);
+    font-size: 12px;
+    color: @text-color-third;
+  }
+}
+
+.header-user-menu {
+  width: 210px;
+  .user-info {
+    height: 38px;
+    padding: 16px 12px 0;
+    span {
+      .truncation();
+      display: inline-block;
+      max-width: 88px;
+    }
+    &-name {
+      font-weight: bold;
+      font-size: 16px;
+      float: left;
+    }
+    &-login {
+      margin-left: 8px;
+      color: @text-color-secondary;
+      position: relative;
+      top: 2px;
+    }
+  }
+  .new{
+    background: @primary-color;
+    color: #fff;
+    line-height: 12px;
+    font-size: 12px;
+    padding: 1px 6px;
+    border-radius: 10px;
+    margin-left: 8px;
+    margin-right: 10px;
+    transform: scale(0.90)
+  }
+  .ant-dropdown-menu-item {
+    .user-menu-item-link {
+      padding-left: 24px;
+      .qricon {
+        max-width: 14px;
+        margin-right: 10px;
+      }
+    }
+  }
+}
+.header-user .user-new {
+  position: absolute;
+  margin-left: 30px;
+  margin-top: -36px;
+  background: @primary-color;
+  color: #fff;
+  line-height: 12px;
+  font-size: 12px;
+  padding: 3px 6px 3px 7px;
+  border-radius: 10px 10px 10px 0;
+  transform: scale(0.90)
+}
+
+.qr-popover .ant-popover .ant-menu .ant-menu-item.user-menu-unconfirm {
+    height: 56px;
+    .user-space-unconfirm {
+      display: block;
+      line-height: 1;
+      padding-left: 22px;
+      color: @text-color-third;
+    }
+}
+
+.space-center-modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-space-modal {
+  .ant-modal-content {
+    box-shadow: none;
+  }
+  .user-space-switch {
+    text-align: center;
+    img {
+      max-width: 280px;
+      margin-bottom: 60px;
+    }
+    .space-switch-name {
+      color: @heading-color;
+      font-size: 30px;
+      margin-top: 12px;
+    }
+  }
+}
+
+@media only screen and (max-width: 520px) {
+  .user-space-modal {
+    .user-space-switch {
+      img {
+        width: 100%;
+      }
+    }
+  }
+}

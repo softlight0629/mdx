@@ -1,0 +1,28 @@
+@import '~@/style/parameters.less';
+
+:global {
+  @import '~@/style/common.less';
+
+  .broadcast-box {
+    margin-top: 51px;
+    margin-bottom: 16px;
+    border-radius: 3px;
+    border: 1px solid @border-color;
+
+    &:hover {
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.04);
+    }
+  }
+
+  .layout-container-middle {
+    .logo {
+      width: 200px;
+      margin-right: 0;
+    }
+
+    .header-nav-menu {
+      max-width: calc(100% ~"- 644px");
+    }
+  }
+
+}

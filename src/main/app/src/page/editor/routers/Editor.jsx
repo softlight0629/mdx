@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Row, Col } from 'antd';
 import DocumentTitle from 'react-document-title';
 import QrPageList from '../components/QrPageList';
+import PropInspector from '../components/PropInspector';
 import EditorHeader from '@/component/Editor/EditorHeader';
 import DefaultLayout from '@/component/Layout/Default';
 import Container from '@/component/Layout/Container';
@@ -20,11 +21,14 @@ class Editor extends Component {
                 <Col sm={3} xs={24}>
                   <QrPageList />
                 </Col>
-                <Col sm={21} xs={24}>
+                <Col sm={18} xs={24}>
                   <Santa
                     className="qr-editor-wrapper"
                     contentClassName="qr-editor-wrapper-content"
                   />
+                </Col>
+                <Col sm={3} xs={24}>
+                  <PropInspector />
                 </Col>
               </Row>              
             </Container>

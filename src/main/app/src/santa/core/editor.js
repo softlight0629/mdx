@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
 import { QmHeader, QmBanner, QmFeature, QmFooter } from '../modules';
 import { QsNav, QsCarousel, QsCardList, QsCard } from '../components';
+import { observable } from 'mobx';
+import { observer } from 'mobx-react';
 
+@observer
 class CoreEditor extends Component {
 
   render() {
-    const cardList = [
+    const cardList = observable([
       {
         title: '在线文档编辑，团队协同首选',
         img: 'https://gw.alipayobjects.com/zos/rmsportal/rjmsOmsQUvFqrTBaLawk.svg',
@@ -21,7 +24,7 @@ class CoreEditor extends Component {
         img: 'https://gw.alipayobjects.com/zos/rmsportal/rjmsOmsQUvFqrTBaLawk.svg',
         description: '主流 Office 文件全兼容 多人协同，轻松拥有团队知识库',
       },
-    ]
+    ]);
 
     return (
       <div className="santa-core-editor" ref="core" id="J-core-editor">
@@ -40,7 +43,8 @@ class CoreEditor extends Component {
                 <QsCardList
                   dataSource={cardList}
                   render={(card) => {
-                    return (<QsCard title={card.title} img={card.img} description={card.description} />)
+                    const c = observable(card);
+                    return (<QsCard title={c.title} img={c.img} description={c.description} card={c} qmodel={c} />)
                   }}
                 />
               </div>

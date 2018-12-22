@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
+import { withEditableBundary } from '@/component/EditableBundary';
 
 import './Card.less';
+import { observer } from 'mobx-react';
 
+@observer
 class Card extends Component {
 
   render() {
-    const { img, title, description } = this.props;
+    const { img, title, description } = this.props.card;
 
     return (
       <div className="s-card">
@@ -26,4 +29,4 @@ class Card extends Component {
   }
 }
 
-export default Card;
+export default withEditableBundary(Card);

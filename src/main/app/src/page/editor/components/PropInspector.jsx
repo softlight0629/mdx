@@ -9,17 +9,23 @@ class PropInspector extends Component {
 
   render() {
     const { inspectObj } = this.props.inspectorStore;
+    console.log(inspectObj && inspectObj.qclazz, 'inspectObj....');
+    const inspector = inspectObj && inspectObj.qclazz.createInspector(inspectObj);
 
     return (
       <div className="qr-editor-prop-inspector">
         <div className="qr-editor-prop-inspector-inner">
           <div className="inspector">
-            <QrRow label="卡片标题写什么?">
-              <QrInput value={inspectObj && inspectObj.title } onChange={e => inspectObj.title = e.target.value }/>
-            </QrRow>
-            <QrRow label="卡片描述写什么?" >
-              <QrInput value={inspectObj && inspectObj.description } onChange={e => inspectObj.description = e.target.value }/>
-            </QrRow>
+            {
+              inspector && Object.keys(inspector).map(k => {
+                const def = inspector[k];
+
+                return (
+                  <QrRow label={def.label}>
+                    <QrInput value={def.value} onChange={e => def.onChange(e) }/>
+                  </QrRow>)
+              })
+            }
           </div>
         </div>
       </div>

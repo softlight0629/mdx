@@ -33,7 +33,7 @@ export const withEditableBundary = (Component, editable) => props => {
 
   return (
     <EditableBundary qmodel={qmodel}>
-      <Component {...otherProps} />
+      <Component {...otherProps} qmodel={qmodel} />
     </EditableBundary>
   )
 }

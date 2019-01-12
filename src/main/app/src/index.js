@@ -12,10 +12,17 @@ import * as serviceWorker from './serviceWorker';
 
 import './view/bundles';
 
+import { bundles } from '@/common/bundles';
 
 const browserHistory = createBrowserHistory();
 
-const stores = new Root();
+let stores = new Root();
+
+bundles.forEach(bundle => {
+  stores = Object.assign({}, stores, bundle.createStore(stores));
+});
+
+console.log(stores, 'xxxxx');
 
 ReactDOM.render(
   <Provider { ...stores }>

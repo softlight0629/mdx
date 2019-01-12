@@ -31,13 +31,13 @@ export default (props) => {
                           <a href={`${defaultSpaceHost}/help/about`} target="_blank">{__('关于我们')}</a>
                         </li>
                         <li>
-                          <a href={`${defaultSpaceHost}/yuque/jobs`} target="_blank">{__('加入我们')}</a>
+                          <a href={`${defaultSpaceHost}/quyue/jobs`} target="_blank">{__('加入我们')}</a>
                         </li>
                         <li>
                           <a href={`${defaultSpaceHost}/terms`} target="_blank">{__('服务协议')}</a>
                         </li>
                         <li>
-                          <a href={`${defaultSpaceHost}/yuque/blog`} target="_blank">{__('博客')}</a>
+                          <a href={`${defaultSpaceHost}/quyue/blog`} target="_blank">{__('博客')}</a>
                         </li>
                       </ul>
                     </Col>
@@ -45,7 +45,7 @@ export default (props) => {
                       <h6 className="col-title">{__('产品')}</h6>
                       <ul className="links">
                         <li>
-                          <a href={`${defaultSpaceHost}/help/why`} target="_blank">{__('为什么选择语雀')}</a>
+                          <a href={`${defaultSpaceHost}/help/why`} target="_blank">{__('为什么选择鱼鹊')}</a>
                         </li>
                         <li>
                           <a href={`${defaultSpaceHost}/help`} target="_blank">{__('帮助文档')}</a>
@@ -54,7 +54,7 @@ export default (props) => {
                           <a href={`${defaultSpaceHost}/pricing`} target="_blank">{__('定价')}</a>
                         </li>
                         <li>
-                          <a href={`${defaultSpaceHost}/yuque/changelog`} target="_blank">{__('更新日志')}</a>
+                          <a href={`${defaultSpaceHost}/quyue/changelog`} target="_blank">{__('更新日志')}</a>
                         </li>
                       </ul>
                     </Col>
@@ -70,7 +70,7 @@ export default (props) => {
                       <h6 className="col-title">{__('联系我们')}</h6>
                       <ul className="links">
                         <li>
-                          <a href="mailto:support@yuque.com">support@yuque.com</a>
+                          <a href="mailto:support@quyue.com">support@quyue.com</a>
                         </li>
                       </ul>
                     </Col>
@@ -78,9 +78,9 @@ export default (props) => {
                 </Col>
                 <Col xs={24} lg={{ span: 6, pull: 18 }}>
                   <div className="footer-logo">
-                    <img src="https://gw.alipayobjects.com/zos/rmsportal/psMFkWcprEGezHFBZzlI.svg" alt="语雀" />
+                    <img src="https://gw.alipayobjects.com/zos/rmsportal/psMFkWcprEGezHFBZzlI.svg" alt="鱼鹊" />
                     <div className="copyright">
-                      <p>&copy; 2018 语雀</p>
+                      <p>&copy; 2018 鱼鹊</p>
                       <p>浙ICP备16025414号-3</p>
                     </div>
                   </div>

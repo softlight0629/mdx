@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import classNames from 'classnames';
+import { inject } from 'mobx-react';
 
+@inject('editorStore')
 class QrPageList extends Component {
 
   renderQrPage(qrPage) {
@@ -13,15 +15,20 @@ class QrPageList extends Component {
     )
   }
 
-  render() {
+  edit(pageId) {
+    this.props.editorStore.edit(pageId);
+  }
 
+  render() {
     const { qrSite, qrPage } = this.props;
 
     const qrPages = [{
       title: '首页',
+      pageId: 'ykmlopm',
     },
     {
       title: '产品展示',
+      pageId: 'opuytai',
     },
     {
       title: '联系我们',
@@ -36,8 +43,8 @@ class QrPageList extends Component {
             {
               qrPages.map(q => {
                 return (
-                  <li className="qrpage-list-item" key={q.id}>
-                    <a href="" className="link">{this.renderQrPage(q)}</a>
+                  <li className="qrpage-list-item" key={q.pageId} onClick={() => this.edit(q.pageId)} >
+                    <a href="javascript:void(0);" className="link">{this.renderQrPage(q)}</a>
                   </li>
                 )
               })

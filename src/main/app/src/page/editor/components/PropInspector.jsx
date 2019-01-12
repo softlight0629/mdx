@@ -9,8 +9,7 @@ class PropInspector extends Component {
 
   render() {
     const { inspectObj } = this.props.inspectorStore;
-    console.log(inspectObj && inspectObj.qclazz, 'inspectObj....');
-    const inspector = inspectObj && inspectObj.qclazz.createInspector(inspectObj);
+    const inspector = inspectObj && inspectObj.getClass().createInspector(inspectObj);
 
     return (
       <div className="qr-editor-prop-inspector">

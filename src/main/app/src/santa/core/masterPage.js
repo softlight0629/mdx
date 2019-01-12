@@ -19,9 +19,20 @@ const renderComp = (comp, data) => {
   };
   const qmodel = Comp.createModel(model);
 
-  qmodel.qclazz = Comp;
+  qmodel._qclass = Comp;
 
   return (<Comp qmodel={qmodel}>{ childComps }</Comp>)
+}
+
+const _renderComp = (compQ) => {
+  const Comp = compQ.getClass();
+
+  let childComps;
+  if (compQ.components) {
+    childComps = compQ.components.map(comp => _renderComp(comp));
+  }
+
+  return (<Comp qmodel={compQ}>{ childComps }</Comp>)
 }
 
 MasterPage.Header = (props) => {
@@ -34,12 +45,13 @@ MasterPage.Header = (props) => {
   )
 }
 
-MasterPage.Container = (props) => {
-  const { components, data } = props;
+MasterPage.Page = (props) => {
+  const { page } = props;
+  const PageComp = page.getClass();
 
   return (
-    <div className="masterpage-container">
-      { components && components.map(comp => renderComp(comp, data))}
+    <div className="materpage-page">
+      <PageComp qmodel={page} />
     </div>
   )
 }

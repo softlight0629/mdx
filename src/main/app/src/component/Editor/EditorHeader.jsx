@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import QrPage from '@/qr-component/QrPage';
+import SaveButton from './SaveButton';
 import PublishButton from './PublishButton';
 
 import './EditorHeader.less';
@@ -31,6 +32,7 @@ class EditorHeader extends Component {
           </div>
           <div className="qr-editor-header-action">
             <div className="qr-editor-header-action-item">
+              <SaveButton />
               <PublishButton />
             </div>
           </div>

@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import debounce from 'lodash/debounce';
-
 import SlickCarousel from 'react-slick';
+import { withEditableBundary } from '@/component/EditableBundary';
 
 import './Carousel.less';
-
 
 class CarouselFrame extends Component {
 
@@ -47,7 +46,6 @@ class CarouselSlick extends Component {
       if (autoplay) {
         window.addEventListener('resize', this.onWindowResized);
       }
-      // https://github.com/ant-design/ant-design/issues/7191
       this.innerSlider = this.slick && this.slick.innerSlider;
     }
 
@@ -102,18 +100,6 @@ class CarouselSlick extends Component {
         </div>
       )
     }
-
-  // render() {
-  //   return (
-  //     <div className="s-carousel">
-  //       <div className="s-carousel-frame">
-  //         <div className="s-carousel-frame-inner">
-  //           <img src="https://img.alicdn.com/tps/i4/TB1ON.Rw9zqK1RjSZPxSuw4tVXa.jpg" />
-  //         </div>
-  //       </div>
-  //     </div>
-  //   )
-  // }
 }
 
 class Carousel extends React.Component {
@@ -140,4 +126,4 @@ class Carousel extends React.Component {
 Carousel.Frame = CarouselFrame;
 Carousel.Slick = CarouselSlick;
 
-export default Carousel;
+export default withEditableBundary(Carousel);

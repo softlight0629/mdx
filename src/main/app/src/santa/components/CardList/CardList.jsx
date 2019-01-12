@@ -1,20 +1,21 @@
 import React, { Component } from 'react';
+import { withEditableBundary } from '@/component/EditableBundary';
+import { observer } from 'mobx-react';
 import { QsRow, QsCol, QsCard } from '../';
-
 import './CardList.less';
 
+@observer
 class CardList extends Component {
 
   renderCard(card) {
     const qmodel = QsCard.createModel(card);
-
-    qmodel.qclazz = QsCard;
+    qmodel._qclass = QsCard;
 
     return <QsCard card={qmodel} qmodel={qmodel} />
   }
 
   render() {
-    const { dataSource = [] } = this.props.qmodel;
+    const { cards = [] } = this.props.qmodel;
 
     return (
       <div className="s-card-list">
@@ -28,9 +29,9 @@ class CardList extends Component {
             )
           })}
         </div> */}
-        <QsRow type="flex" justify="space-between" align="bottom">
+        <QsRow type="flex" justify="center" align="bottom">
           {
-            dataSource.map(d => {
+            cards.map(d => {
               return (
                 <QsCol xs={24} lg={6}>
                   {this.renderCard(d)}
@@ -53,4 +54,4 @@ class CardList extends Component {
   }
 }
 
-export default CardList;
+export default withEditableBundary(CardList);

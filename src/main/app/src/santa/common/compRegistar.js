@@ -15,6 +15,6 @@ export default {
   },
 
   get(type, name) {
-    return this[type](name);
+    return this.component(name);
   },
 }

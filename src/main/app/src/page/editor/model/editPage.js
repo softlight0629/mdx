@@ -24,6 +24,10 @@ class EditPage {
     return this.pageModel.components;
   }
 
+  addComponent(compModel) {
+    this.pageModel.addComponent(compModel);
+  }
+
   getClass() {
     return this.pageModel.getClass();
   }

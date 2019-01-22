@@ -1,0 +1,60 @@
+.s-list {
+
+  .s-list-item {
+    padding: .16rem .32rem;
+  }
+  .s-link {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    height: 132px;
+
+    &-mask {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0,0,0,.3);
+    }
+
+    &-cover {
+      display: block;
+      min-height: .2rem;
+      background-position: 50%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 100%;
+    }
+
+    &-content {
+      position: absolute;
+      padding: .32rem;
+      width: 100%;
+      left: 0;
+      word-wrap: break-word;
+      color: #fff;
+      text-align: center;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 24px;      
+    }
+
+    &-tag {
+      position: absolute;
+      padding: 10px;
+      top: 0;
+      left: 0;
+
+      label {
+        display: inline-block;
+        font-size: 12px;
+        padding: 2px 4px; 
+        color: #fff;
+        border-radius: 5px;
+        border: 1px solid #fff;
+        background: rgba(0,0,0,.3);
+      }
+    }
+  }
+}

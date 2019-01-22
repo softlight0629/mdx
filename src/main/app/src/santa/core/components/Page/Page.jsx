@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { observer } from 'mobx-react';
 
 const _renderComp = (compQ) => {
   const Comp = compQ.getClass();
@@ -11,6 +12,7 @@ const _renderComp = (compQ) => {
   return (<Comp qmodel={compQ}>{ childComps }</Comp>)
 }
 
+@observer
 class Page extends Component {
   
   render() {

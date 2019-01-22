@@ -19,19 +19,16 @@ class PropertyPanel extends Component {
     })
   }
 
-
   render() {
     const { inspectObj } = this.props.inspectorStore;
     const properties = inspectObj && inspectObj.getProperties();
 
     return (
-      <div className="qr-editor-propery-panel">
-        <div className="qr-editor-propery-panel">
-          <div className="properties">
-            {
-              properties && this.renderPropComps(properties, inspectObj)
-            }
-          </div>
+      <div className="qr-editor-property-panel">
+        <div className="properties">
+          {
+            properties && this.renderPropComps(properties, inspectObj)
+          }
         </div>
       </div>
     )

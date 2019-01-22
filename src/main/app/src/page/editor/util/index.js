@@ -49,5 +49,6 @@ const convertToEditPage = (pageData) => {
 }
 
 export {
+  _createQmodel,
   convertToEditPage,
 }

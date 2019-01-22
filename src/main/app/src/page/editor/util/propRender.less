@@ -1,13 +1,58 @@
 .prop-array {
 
-  .prop-array-inner {
-    display: none;
+  h3 {
+    font-size: 18px;
+    font-weight: 400;
+    padding-left: 6px;
   }
 
-}
 
-.prop-array:hover {
-  .prop-array-inner {
-    display: block;
+  &-item {
+    position: relative;
+    min-height: 38px;
+    border-bottom: 1px solid #f0f0f0;
+    cursor: pointer;
+
+    &:hover {
+
+      .title {
+        background: #ecece6;
+      }
+    }
+
+    .title {
+      padding-top: 8px;
+      height: 38px;
+      padding-left: 26px;
+      overflow: hidden;
+      position: relative;
+
+      .drag {
+        width: 16px;
+        height: 16px;
+        position: absolute;
+        background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAPlJREFUWAljYBgFAxwCzCTYzwRUawnEmkD8HIh/AzEy4AJyHIFYHIifAvF/ICYIWAiqQCiIAjK9oFx7IF2NkAKzQHxFqBiIXgpl46VAviIW6CEpBFnAi8QHsWGWg4T1keTwMklxwCUkk+4D2Z+R+CA2SAwGkNXCxCimQY61AmI3IAbFNzoAibkDMUgNKR5DN2eE8YdtNlQCRuQSYiKTlMRCSjZEVovXHaQ4ADlrDdpsCMqio9kQb5yjS45mQ1JyAXLWIlQbIqtFD3UUPikOGM2GKEE3bDjUzoZOwJAZFI1SJaBDRnZteJEWiRRUZhBqlI7WhrQIedqaCQDCKDm/ocKxtgAAAABJRU5ErkJggg==) no-repeat 50% 50%;
+        background-size: 100%;
+        top: 11px;
+        left: 8px;
+        opacity: .3;
+        cursor: default;
+      }
+    }
+    &-inner {
+      display: none;
+      background: #fcfcfc;
+    }
+  }
+
+  &-item-expand {
+    .prop-array-item-inner {
+      display: block;
+    }
+  }
+
+  &-action {
+    padding-left: 6px;
+    margin-top: 12px;
   }
 }

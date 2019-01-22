@@ -13,6 +13,12 @@ import { default as QsContainer } from './Container';
 
 import { default as QsProduct } from './Product';
 
+import { default as QsButton } from './Button';
+
+import { default as QsList } from './List';
+
+import { default as QsBanner } from './Banner';
+
 function register(name, clazz) {
   createComp('component', name, clazz);
 }
@@ -32,6 +38,9 @@ register('santa.viewer.components.QsNav', QsNav);
 register('santa.viewer.components.QsCardList', QsCardList);
 register('santa.viewer.components.QsContainer', QsContainer);
 register('santa.viewer.components.QsProduct', QsProduct);
+register('santa.viewer.components.QsButton', QsButton);
+register('santa.viewer.components.QsList', QsList);
+register('santa.viewer.components.QsBanner', QsBanner);
 
 export {
   QsRow,
@@ -42,6 +51,9 @@ export {
   QsCardList,
   QsContainer,
   QsProduct,
+  QsButton,
+  QsList,
+  QsBanner,
 }
 
 

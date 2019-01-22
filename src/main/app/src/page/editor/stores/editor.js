@@ -2,11 +2,12 @@ import { observable } from 'mobx';
 import Cache from './cache';
 
 import { convertToEditPage } from '../util'; 
+import compRegistar from '@/santa/common/compRegistar';
 
 // 传入 santa 之前，应该就要实例化好所有的 pagemodel.
 class EditorStore {
 
-  @observable editPageId;
+  @observable editPageId = 'ykmlopm';
 
   constructor(root) {
     this.siteStore = root.siteStore;
@@ -27,6 +28,19 @@ class EditorStore {
     }
 
     return editPage;
+  }
+
+  addComponent(comp, modelData) {
+    const Comp = compRegistar.get('component', comp);
+    const model = {
+      ...modelData,
+    }
+    const qmodel = Comp.createModel(model);
+  
+    qmodel._qclass = Comp;
+
+    const editPage = this.getEditPage(this.editPageId);
+    editPage.addComponent(qmodel);
   }
 
   save() {

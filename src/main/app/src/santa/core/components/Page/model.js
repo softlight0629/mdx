@@ -5,6 +5,7 @@ class Page extends QModelContainer {
   constructor(option) {
     super(option);
   }
+
 }
 
 export default Page;

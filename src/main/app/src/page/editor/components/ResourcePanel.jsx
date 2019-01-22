@@ -12,11 +12,18 @@ class ResourcePanel extends Component {
     this.props.editorStore.addComponent(component, modelData);
   }
 
+  closePanel() {
+    this.props.editorStore.resource.closePanel();
+  }
+
   render() {
 
     return (
       <div className="le-editor-resource-panel">
-        <h3>添加组件</h3>
+        <h3>
+          添加组件
+          <i className="leicon leicon-close" onClick={() => this.closePanel()}></i>  
+        </h3>
         <div className="resource-list">
           <Tabs
             defaultActiveKey="1"

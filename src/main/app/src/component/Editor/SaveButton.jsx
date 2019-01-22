@@ -14,7 +14,7 @@ class SaveButton extends PureComponent {
 
     return (
       <Button onClick={() => { this.save()}}>
-        <span className="qricon qricon-launch"></span>
+        <span className="leicon leicon-launch"></span>
         <span className="text">{__('保存')}</span>
       </Button>
     )

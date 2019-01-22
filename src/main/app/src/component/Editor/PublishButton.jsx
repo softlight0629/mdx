@@ -10,7 +10,7 @@ class PublishButton extends PureComponent {
       <Button
         type="primary"
       >
-        <span className="qricon qricon-launch"></span>
+        <span className="leicon leicon-launch"></span>
         <span className="text">{__('发布')}</span>
       </Button>
     )

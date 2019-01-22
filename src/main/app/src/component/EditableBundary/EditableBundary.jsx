@@ -12,6 +12,11 @@ class EditableBundary extends Component {
     this.props.editorStore.inspector.inspect(this.props.qmodel);
   }
 
+  showResourcePanel(e) {
+    e.stopPropagation();
+    this.props.editorStore.resource.showPanel();
+  }
+
   render() {
     const { children, editable = true } = this.props;
 
@@ -22,6 +27,9 @@ class EditableBundary extends Component {
     return (
       <div className="le-editable-bundary" onClick={this.handleClick.bind(this)}>
         { children }
+
+        <div className="le-add-comp-btn" onClick={(e) => this.showResourcePanel(e)}>
+        </div>
       </div>
     )
   }

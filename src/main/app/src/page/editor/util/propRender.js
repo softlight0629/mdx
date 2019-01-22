@@ -7,27 +7,6 @@ import LeColor from '@/le-component/LeColor';
 import './propRender.less';
 const PropRender = {};
 
-// PropRender.array = (propModel, property) => {
-//   const items = property.items;
-
-//   const itemsProperties= items.properties;
-//   const itemKeys = Object.keys(itemsProperties);
-
-//   const renderItemProp = (itemPropModel) => {
-//     return itemKeys.map(itemKey => {
-//       const itemProperty = itemsProperties[itemKey];
-//       const type = itemProperty.type;
-  
-//       return observer(PropRender[type](itemPropModel, itemProperty)());
-//     });
-//   }
-
-//   return propModel.map(itemPropModel => {
-//     return renderItemProp(itemPropModel)
-//   });
-// }
-
-
 @observer
 class StringProp extends PureComponent {
 

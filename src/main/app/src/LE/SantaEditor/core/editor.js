@@ -8,7 +8,7 @@ import '@/LE/components';
 class CoreEditor extends Component {
 
   render() {
-    const { masterPage, page, editPage } = this.props;
+    const { editPage } = this.props;
 
     return (
       <div className="santa-core-editor" ref="core" id="J-core-editor">
@@ -19,7 +19,6 @@ class CoreEditor extends Component {
           <div className="santa-core-editor-canvas-container">
             <MaterPage.Page page={editPage} />
             <div className="santa-core-editor-canvas-footer">
-              {/* <QmFooter /> */}
             </div>
           </div>
         </div>

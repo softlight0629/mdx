@@ -18,6 +18,7 @@ class Editor extends Component {
   render() {
     const { editPageId } = this.props.editorStore;
     const { inspectedCompModel } = this.props.editorStore.inspector;
+    const { panelVisible: resourcePanelVisible } = this.props.editorStore.resource;
     const editPage = this.props.editorStore.getEditPage(editPageId);
     const pageData = this.props.siteStore.getPageData(editPageId);
     const masterPage = this.props.siteStore.getMasterPage();
@@ -27,7 +28,7 @@ class Editor extends Component {
         <DefaultLayout headless>
           <div className="le-editor-wrapper">
             <EditorHeader />
-            {/* <ResourcePanel /> */}
+            { resourcePanelVisible && <ResourcePanel /> }
             { inspectedCompModel &&  <PropertyPanel inspectedCompModel={inspectedCompModel} />}
             <Container mode="full">
               <Row>

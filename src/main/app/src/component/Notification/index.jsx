@@ -31,7 +31,7 @@ class Notifications extends Component {
         className="notifications"
       >
         <Badge dot={unreadCount > 0}>
-          <span className="qricon qricon-bell" />
+          <span className="leicon leicon-bell" />
         </Badge>
       </a>
     );

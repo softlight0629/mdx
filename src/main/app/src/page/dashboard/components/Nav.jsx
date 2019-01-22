@@ -7,37 +7,37 @@ import styles from './Nav.module.less';
 export default (props) => (
   <div className={styles.nav}>
     <Link exact to="/dashboard">
-      <span className="qricon qricon-storehouse" />
+      <span className="leicon leicon-storehouse" />
       {__('总览')}
     </Link>
 
     <span className={styles.split} />
 
     <Link exact to="/dashboard">
-      <span className="qricon qricon-app" />
-      {__('产品管理')}
+      <span className="leicon leicon-app" />
+      {__('站点')}
     </Link>
 
     <Link exact to="/dashboard">
-      <span className="qricon qricon-team" />
-      {__('客户管理')}
+      <span className="leicon leicon-team" />
+      {__('成员')}
     </Link>
 
     <span className={styles.split} />
 
     <Link exact to="/dashboard">
-      <span className="qricon qricon-earth" />
-      {__('访问数据')}
+      <span className="leicon leicon-earth" />
+      {__('域名')}
     </Link>
 
     <Link exact to="/dashboard">
-      <span className="qricon qricon-star-o" />
-      {__('营销工具')}
+      <span className="leicon leicon-star-o" />
+      {__('域名')}
     </Link>
 
     <Link exact to="/dashboard">
-      <span className="qricon qricon-comments" />
-      {__('客户沟通')}
+      <span className="leicon leicon-comments" />
+      {__('设置')}
     </Link>
   </div>
 )

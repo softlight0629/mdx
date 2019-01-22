@@ -9,7 +9,7 @@ export default (props) => {
     <Menu>
       <Menu.Item>
         <a href="/new">
-          <span className="qricon qricon-storehouse" />
+          <span className="leicon leicon-storehouse" />
           <span className="text">
             <span>{__('新建知识库')}</span>
           </span>
@@ -17,7 +17,7 @@ export default (props) => {
       </Menu.Item>
       <Menu.Item>
         <a href="/groups/new">
-          <span className="qricon qricon-team" />
+          <span className="leicon leicon-team" />
           <span className="text">
             <span>{__('新建团队')}</span>
           </span>
@@ -33,8 +33,8 @@ export default (props) => {
       {...props}
     >
       <div className="HeadNewButton">
-        <span className="qricon qricon-header-new" />
-        <span className="qricon qricon-triangle-down" />
+        <span className="leicon leicon-header-new" />
+        <span className="leicon leicon-triangle-down" />
       </div>
     </LePopover>
   );

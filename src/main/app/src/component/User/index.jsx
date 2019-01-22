@@ -22,7 +22,7 @@ class User extends PureComponent {
           <Menu.Divider />
           <Menu.Item>
             <a href={`/${me.login}`}>
-              <span className="qricon qricon-user-h" />
+              <span className="leicon leicon-user-h" />
               <span className="text">
                 <span>{__('个人页面')}</span>
               </span>
@@ -30,7 +30,7 @@ class User extends PureComponent {
           </Menu.Item>
           <Menu.Item>
             <a href="/dashboard/docs">
-              <span className="qricon qricon-doc" />
+              <span className="leicon leicon-doc" />
               <span className="text">
                 {__('我的文档')}
               </span>
@@ -39,7 +39,7 @@ class User extends PureComponent {
 
           <Menu.Item>
             <a href="/dashboard/collections" onClick={() => { this.handleNew('markable-header'); }}>
-              <span className="qricon qricon-star-o" />
+              <span className="leicon leicon-star-o" />
               <span className="text">
                 {__('我的收藏')}
               </span>
@@ -48,7 +48,7 @@ class User extends PureComponent {
 
           <Menu.Item>
             <a href="/dashboard/follows">
-              <span className="qricon qricon-like-o" />
+              <span className="leicon leicon-like-o" />
               <span className="text">
                 <span>{__('我的关注')}</span>
               </span>
@@ -57,7 +57,7 @@ class User extends PureComponent {
           <Menu.Divider />
           <Menu.Item>
             <a href="/settings">
-              <span className="qricon qricon-setting" />
+              <span className="leicon leicon-setting" />
               <span className="text">
                 <span>{__('设置')}</span>
               </span>
@@ -65,7 +65,7 @@ class User extends PureComponent {
           </Menu.Item>
           <Menu.Item>
             <a href="#" onClick={this.loginOut}>
-              <span className="qricon qricon-logout" />
+              <span className="leicon leicon-logout" />
               <span className="text">
                 <span>{__('退出#logout')}</span>
               </span>

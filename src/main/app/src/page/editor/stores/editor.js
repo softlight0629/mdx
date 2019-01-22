@@ -1,6 +1,7 @@
 import { observable } from 'mobx';
 import Cache from './cache';
 import Inspector from './inspector';
+import Resource from './resource';
 
 import { convertToEditPage } from '../util'; 
 import compRegistar from '@/LE/common/compRegistar';
@@ -14,6 +15,7 @@ class EditorStore {
     this.siteStore = root.siteStore;
     this.cache = new Cache();
     this.inspector = new Inspector();
+    this.resource = new Resource();
   }
 
   edit(pageId) {

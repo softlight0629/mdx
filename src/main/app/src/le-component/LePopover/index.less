@@ -1,0 +1,77 @@
+@import '~@/style/parameters.less';
+
+.le-popover {
+  .ant-popover-open {
+    color: @primary-color;
+  }
+
+  /* popover 用在主按钮时，需要把主按钮颜色设置为白色*/
+  .ant-popover-open.ant-btn-primary{
+    color: #fff;
+  }
+
+  /* Antd 的比较小，调整为 8 像素高的等腰直角三角形*/
+  .ant-popover-arrow {
+    width: 8 * sqrt(2px);
+    height: 8 * sqrt(2px);
+    border-top-left-radius: 2px;
+    margin-top: -2px;
+  }
+
+  /* popover 和 menu 一起使用时，圆角会被 menu 的背景覆盖，重新加上 */
+  .ant-popover-inner .ant-menu {
+    border-radius: 4px;
+  }
+
+  .ant-popover-content {
+    min-width: 140px;
+  }
+
+  &.le-popover-menu .ant-popover-inner-content {
+    padding: 0;
+  }
+
+  &.le-popover-noarrow {
+    .ant-popover-arrow {
+      display: none;
+    }
+
+    .ant-popover-placement-bottom,
+    .ant-popover-placement-bottomLeft,
+    .ant-popover-placement-bottomRight {
+      padding-top: 0;
+    }
+  }
+
+  .ant-popover .ant-menu {
+    padding: 8px 0;
+    border: none;
+
+    .ant-menu-item {
+      height: 36px;
+      line-height: 36px;
+      color: @text-color;
+
+      &:hover {
+        color: @text-color;
+        background-color: @dropmenu-hover-background-color;
+      }
+
+      a {
+        color: @text-color;
+
+        &:hover {
+          color: @text-color;
+        }
+      }
+    }
+
+    .ant-menu-item-divider {
+      margin: 8px 0;
+    }
+
+    .text {
+      margin-left: 8px;
+    }
+  }
+}

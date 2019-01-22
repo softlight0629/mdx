@@ -1,9 +1,9 @@
 import React, { PureComponent } from 'react';
 import { Button } from 'antd';
-import QrInput from '@/qr-component/QrInput';
+import LeInput from '@/le-component/LeInput';
 import { observer } from 'mobx-react';
-import QrRow from '@/qr-component/QrRow';
-import QrColor from '@/qr-component/QrColor';
+import LeRow from '@/le-component/LeRow';
+import LeColor from '@/le-component/LeColor';
 import './propRender.less';
 const PropRender = {};
 
@@ -35,9 +35,9 @@ class StringProp extends PureComponent {
     const { propModel, property } = this.props;
 
     return (
-      <QrRow label={property.label}>
-        <QrInput value={property.value(propModel)} onChange={e => property.onChange(e, propModel)}/>
-      </QrRow>
+      <LeRow label={property.label}>
+        <LeInput value={property.value(propModel)} onChange={e => property.onChange(e, propModel)}/>
+      </LeRow>
     )
   }
 }
@@ -119,9 +119,9 @@ class ColorProp extends PureComponent {
     const { propModel, property } = this.props;
 
     return (
-      <QrRow label={property.label}>
-        <QrColor value={property.value(propModel)} onChange={e => property.onChange(e, propModel)}/>
-      </QrRow>
+      <LeRow label={property.label}>
+        <LeColor value={property.value(propModel)} onChange={e => property.onChange(e, propModel)}/>
+      </LeRow>
     )
   }
 }

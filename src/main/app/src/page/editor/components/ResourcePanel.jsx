@@ -15,7 +15,7 @@ class ResourcePanel extends Component {
   render() {
 
     return (
-      <div className="qr-editor-resource-panel">
+      <div className="le-editor-resource-panel">
         <h3>添加组件</h3>
         <div className="resource-list">
           <Tabs
@@ -24,7 +24,7 @@ class ResourcePanel extends Component {
             style={{ height: '100%' }}
           >
             <TabPane tab="Banner" key="1">
-              <div className="resouce-list-item" onClick={() => this.handleAddComponent('santa.viewer.components.QsBanner', {
+              <div className="resouce-list-item" onClick={() => this.handleAddComponent('santa.viewer.components.StBanner', {
                 img: 'https://gw.alipayobjects.com/zos/rmsportal/JRmzNcWymcwpVRSISlbM.png',
                 linkAddr: 'http://www.baidu.com',
               })}>
@@ -36,7 +36,7 @@ class ResourcePanel extends Component {
               </div>
             </TabPane>
             <TabPane tab="列表" key="2">
-              <div className="resouce-list-item" onClick={() => this.handleAddComponent('santa.viewer.components.QsList', {
+              <div className="resouce-list-item" onClick={() => this.handleAddComponent('santa.viewer.components.StList', {
                 listItems: [
                   {
                     title: '银行存款证明',
@@ -59,7 +59,7 @@ class ResourcePanel extends Component {
             </TabPane>
             <TabPane tab="按钮" key="4">
               <div className="resouce-list-item">
-                <div className="resource-component" onClick={() => this.handleAddComponent('santa.viewer.components.QsButton', {
+                <div className="resource-component" onClick={() => this.handleAddComponent('santa.viewer.components.StButton', {
                   text: '测试按钮',
                   linkAddr: 'http://www.baidu.com',
                   bgColor: '#02B588',

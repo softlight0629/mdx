@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Switch, Route } from 'react-router';
 import { bundles } from '@/common/bundles';
 import { inject } from 'mobx-react';
-import { flatten } from 'lodash/flatten';
 
 @inject('accountStore')
 class App extends Component {

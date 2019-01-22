@@ -1,5 +1,5 @@
 import EditPage from '../model/editPage';
-import compRegistar from '@/santa/common/compRegistar';
+import compRegistar from '@/LE/common/compRegistar';
 
 const _createQmodel = (comp, data) => {
   const { dataRef, components } = comp;

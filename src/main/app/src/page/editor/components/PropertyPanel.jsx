@@ -24,7 +24,7 @@ class PropertyPanel extends Component {
     const properties = inspectedCompModel && inspectedCompModel.getProperties();
 
     return (
-      <div className="qr-editor-property-panel">
+      <div className="le-editor-property-panel">
         <div className="properties">
           {
             properties && this.renderPropComps(properties, inspectedCompModel)

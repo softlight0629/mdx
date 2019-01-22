@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
-import QrPopover from '@/qr-component/QrPopover';
-import Avatar from '@/qr-component/QrAvatar';
+import LePopover from '@/le-component/LePopover';
+import Avatar from '@/le-component/LeAvatar';
 import { Menu } from 'antd';
 import { __ } from '@/util/common';
 
@@ -76,7 +76,7 @@ class User extends PureComponent {
     );
     return (
       <div>
-        <QrPopover
+        <LePopover
           className="popover-header-user"
           placement="bottomRight"
           type="menu"
@@ -85,7 +85,7 @@ class User extends PureComponent {
           <div className="header-user">
             <Avatar src={me.avatar_url} name={me.name} />
           </div>
-        </QrPopover>
+        </LePopover>
       </div>
     )
   }

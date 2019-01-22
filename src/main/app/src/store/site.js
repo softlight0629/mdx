@@ -8,10 +8,10 @@ const pages = {
       components: [
         // {
         //   type: 'Container',
-        //   componentType: 'santa.viewer.components.QsContainer',
+        //   componentType: 'santa.viewer.components.StContainer',
         //   components: [
         //     {
-        //       componentType: 'santa.viewer.components.QsCarousel',
+        //       componentType: 'santa.viewer.components.StCarousel',
         //       type: 'Component',
         //       dataRef: 'data-lkxjiu',
         //     }
@@ -19,10 +19,10 @@ const pages = {
         // },
         {
           type: 'Container',
-          componentType: 'santa.viewer.components.QsContainer',
+          componentType: 'santa.viewer.components.StContainer',
           components: [
             {
-              componentType: 'santa.viewer.components.QsList',
+              componentType: 'santa.viewer.components.StList',
               type: 'Component',
               dataRef: 'data-ymlxks',
             },
@@ -30,16 +30,14 @@ const pages = {
         },
         {
           type: 'Component',
-          componentType: 'santa.viewer.components.QsButton',
+          componentType: 'santa.viewer.components.StButton',
           dataRef: 'data-kolijg',
         },
         {
           type: 'Component',
-          componentType: 'santa.viewer.components.QsBanner',
+          componentType: 'santa.viewer.components.StBanner',
           dataRef: 'data-xklihj',
         },
-      ],
-      mobileComponents: [
       ],
       data: {
         documentData: {
@@ -89,29 +87,16 @@ const pages = {
       title: '测试',
       componentType: 'santa.core.components.QcPage',
       components: [
-        // {
-        //   type: 'Container',
-        //   componentType: 'santa.viewer.components.QsContainer',
-        //   components: [
-        //     {
-        //       componentType: 'santa.viewer.components.QsCarousel',
-        //       type: 'Component',
-        //       dataRef: 'data-lkxjiu',
-        //     }
-        //   ],
-        // },
         {
           type: 'Component',
-          componentType: 'santa.viewer.components.QsButton',
+          componentType: 'santa.viewer.components.StButton',
           dataRef: 'data-kolijg',
         },
         {
           type: 'Component',
-          componentType: 'santa.viewer.components.QsBanner',
+          componentType: 'santa.viewer.components.StBanner',
           dataRef: 'data-xklihj',
         },
-      ],
-      mobileComponents: [
       ],
       data: {
         documentData: {
@@ -166,7 +151,7 @@ class SiteStore {
         type: 'module',
         components: [
           {
-            component: 'QsNav',
+            component: 'StNav',
             type: 'component',
           }
         ],

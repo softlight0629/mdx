@@ -8,7 +8,7 @@ import ResourcePanel from '../components/ResourcePanel';
 import EditorHeader from '@/component/Editor/EditorHeader';
 import DefaultLayout from '@/component/Layout/Default';
 import Container from '@/component/Layout/Container';
-import { Santa } from '@/santa'
+import { SantaEditor } from '@/LE'
 import { inject, observer } from 'mobx-react';
 
 @inject('editorStore', 'siteStore')
@@ -22,11 +22,10 @@ class Editor extends Component {
     const pageData = this.props.siteStore.getPageData(editPageId);
     const masterPage = this.props.siteStore.getMasterPage();
 
-    console.log(inspectedCompModel, 'xxxxxxasxa');
     return (
       <DocumentTitle title={`Editing · LE`}>
         <DefaultLayout headless>
-          <div className="qr-editor-wrapper">
+          <div className="le-editor-wrapper">
             <EditorHeader />
             {/* <ResourcePanel /> */}
             { inspectedCompModel &&  <PropertyPanel inspectedCompModel={inspectedCompModel} />}
@@ -36,15 +35,15 @@ class Editor extends Component {
                   <PageList />
                 </Col>
                 <Col sm={21} xs={24}>
-                  <div className="qr-editor-preview">
-                    <div className="qr-editor-preview-container-wrapper">
-                      <div className="qr-editor-preview-container">
-                        <Santa
+                  <div className="le-editor-preview">
+                    <div className="le-editor-preview-container-wrapper">
+                      <div className="le-editor-preview-container">
+                        <SantaEditor
                           masterPage={masterPage}
                           page={pageData}
                           editPage={editPage}
-                          className="qr-editor-wrapper"
-                          contentClassName="qr-editor-wrapper-content"
+                          className="le-editor-wrapper"
+                          contentClassName="le-editor-wrapper-content"
                         />
                       </div>
                     </div>

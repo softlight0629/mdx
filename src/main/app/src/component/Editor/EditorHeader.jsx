@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import QrPage from '@/qr-component/QrPage';
+import LePage from '@/le-component/LePage';
 import SaveButton from './SaveButton';
 import PublishButton from './PublishButton';
 
 import './EditorHeader.less';
 
-class QrPageTitle extends Component {
+class LePageTitle extends Component {
 
   render() {
     return (
@@ -22,16 +22,16 @@ class EditorHeader extends Component {
     const qrPage = {};
 
     return (
-      <div className="qr-editor-header">
-        <div className="qr-editor-header-content">
-          <div className="qr-editor-header-back"></div>
-          <div className="qr-editor-header-title">
-            <QrPageTitle 
-              title={QrPage.getFormalTitle(qrPage)}
+      <div className="le-editor-header">
+        <div className="le-editor-header-content">
+          <div className="le-editor-header-back"></div>
+          <div className="le-editor-header-title">
+            <LePageTitle 
+              title={LePage.getFormalTitle(qrPage)}
             />
           </div>
-          <div className="qr-editor-header-action">
-            <div className="qr-editor-header-action-item">
+          <div className="le-editor-header-action">
+            <div className="le-editor-header-action-item">
               <SaveButton />
               <PublishButton />
             </div>

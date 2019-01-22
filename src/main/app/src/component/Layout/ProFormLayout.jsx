@@ -9,9 +9,9 @@ const Layout = (props) => {
     <div className={cls}>
       <div className="main-wrapper">
         <div className="layout-container">
-          <div className="qr-form">
-            <div className="qr-form-main">
-              <div className="qr-form-content form-pro">
+          <div className="le-form">
+            <div className="le-form-main">
+              <div className="le-form-content form-pro">
                 <div className="account-slogon"></div>
                 {props.children}
               </div>

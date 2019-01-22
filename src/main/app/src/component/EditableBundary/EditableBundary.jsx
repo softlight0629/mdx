@@ -20,7 +20,7 @@ class EditableBundary extends Component {
     }
 
     return (
-      <div className="qr-editable-bundary" onClick={this.handleClick.bind(this)}>
+      <div className="le-editable-bundary" onClick={this.handleClick.bind(this)}>
         { children }
       </div>
     )

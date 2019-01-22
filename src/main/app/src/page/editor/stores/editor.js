@@ -3,7 +3,7 @@ import Cache from './cache';
 import Inspector from './inspector';
 
 import { convertToEditPage } from '../util'; 
-import compRegistar from '@/santa/common/compRegistar';
+import compRegistar from '@/LE/common/compRegistar';
 
 // 传入 santa 之前，应该就要实例化好所有的 pagemodel.
 class EditorStore {

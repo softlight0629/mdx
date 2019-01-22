@@ -22,9 +22,7 @@ class PageList extends Component {
     const pageList = this.props.siteStore.getPageList();
 
     return (
-      <div class="qr-editor-page-list-wrapper">
-        {/* <div className="page-list-title">
-        </div> */}
+      <div class="le-editor-page-list-wrapper">
         <div className="page-list-body">
           <ul className="list">
             {

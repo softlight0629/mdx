@@ -1,6 +1,6 @@
 import React from 'react';
 import { Menu } from 'antd';
-import QrPopover from '@/qr-component/QrPopover';
+import LePopover from '@/le-component/LePopover';
 import { __ } from '@/util/common'; 
 import './HeadNewButton.less';
 
@@ -27,7 +27,7 @@ export default (props) => {
   );
 
   return (
-    <QrPopover
+    <LePopover
       type="menu"
       content={menu}
       {...props}
@@ -36,6 +36,6 @@ export default (props) => {
         <span className="qricon qricon-header-new" />
         <span className="qricon qricon-triangle-down" />
       </div>
-    </QrPopover>
+    </LePopover>
   );
 };

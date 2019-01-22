@@ -13,7 +13,7 @@ const Layout = (props) => {
           render={() => (
             <ProFormLayout
               slogonMain="欢迎回来"
-              className="qr-login"
+              className="le-login"
             >
               <Login />
             </ProFormLayout>

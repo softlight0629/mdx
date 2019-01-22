@@ -1,15 +1,14 @@
 import React, { Component } from 'react';
-import classNames from 'classnames';
 import { inject } from 'mobx-react';
 
-@inject('editorStore')
-class QrPageList extends Component {
+@inject('editorStore', 'siteStore')
+class PageList extends Component {
 
-  renderQrPage(qrPage) {
+  renderPageItem(page) {
     return (
       <span>
         <h5 className="title">
-          <span className="title-text">{qrPage.title}</span>
+          <span className="title-text">{page.title}</span>
         </h5>
       </span>
     )
@@ -20,31 +19,19 @@ class QrPageList extends Component {
   }
 
   render() {
-    const { qrSite, qrPage } = this.props;
+    const pageList = this.props.siteStore.getPageList();
 
-    const qrPages = [{
-      title: '首页',
-      pageId: 'ykmlopm',
-    },
-    {
-      title: '产品展示',
-      pageId: 'opuytai',
-    },
-    {
-      title: '联系我们',
-    },
-    ];
     return (
-      <div class="qr-editor-qrpage-list-wrapper">
-        {/* <div className="qrpage-list-title">
+      <div class="qr-editor-page-list-wrapper">
+        {/* <div className="page-list-title">
         </div> */}
-        <div className="qrpage-list-body">
+        <div className="page-list-body">
           <ul className="list">
             {
-              qrPages.map(q => {
+              pageList && pageList.map(page => {
                 return (
-                  <li className="qrpage-list-item" key={q.pageId} onClick={() => this.edit(q.pageId)} >
-                    <a href="javascript:void(0);" className="link">{this.renderQrPage(q)}</a>
+                  <li className="page-list-item" key={page.pageId} onClick={() => this.edit(page.pageId)} >
+                    <a href="javascript:void(0);" className="link">{this.renderPageItem(page)}</a>
                   </li>
                 )
               })
@@ -56,4 +43,4 @@ class QrPageList extends Component {
   }
 }
 
-export default QrPageList;
+export default PageList;

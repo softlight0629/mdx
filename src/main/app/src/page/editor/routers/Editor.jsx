@@ -28,7 +28,7 @@ class Editor extends Component {
         <DefaultLayout headless>
           <div className="qr-editor-wrapper">
             <EditorHeader />
-            <ResourcePanel />
+            {/* <ResourcePanel /> */}
             { inspectedCompModel &&  <PropertyPanel inspectedCompModel={inspectedCompModel} />}
             <Container mode="full">
               <Row>

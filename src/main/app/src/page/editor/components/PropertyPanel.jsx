@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { observer, inject } from 'mobx-react';
 import PropRender from '../util/propRender';
 
-@inject('inspectorStore')
+@inject('editorStore')
 @observer
 class PropertyPanel extends Component {
 
@@ -20,14 +20,14 @@ class PropertyPanel extends Component {
   }
 
   render() {
-    const { inspectObj } = this.props.inspectorStore;
-    const properties = inspectObj && inspectObj.getProperties();
+    const { inspectedCompModel } = this.props;
+    const properties = inspectedCompModel && inspectedCompModel.getProperties();
 
     return (
       <div className="qr-editor-property-panel">
         <div className="properties">
           {
-            properties && this.renderPropComps(properties, inspectObj)
+            properties && this.renderPropComps(properties, inspectedCompModel)
           }
         </div>
       </div>

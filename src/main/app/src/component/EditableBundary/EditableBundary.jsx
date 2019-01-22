@@ -3,14 +3,13 @@ import { observer, inject } from 'mobx-react';
 
 import './EditableBundary.less';
 
-@inject('inspectorStore')
+@inject('editorStore')
 @observer
 class EditableBundary extends Component {
 
   handleClick(e) {
     e.preventDefault();
-
-    this.props.inspectorStore.inspect(this.props.qmodel);
+    this.props.editorStore.inspector.inspect(this.props.qmodel);
   }
 
   render() {

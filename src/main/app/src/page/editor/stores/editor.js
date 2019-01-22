@@ -1,5 +1,6 @@
 import { observable } from 'mobx';
 import Cache from './cache';
+import Inspector from './inspector';
 
 import { convertToEditPage } from '../util'; 
 import compRegistar from '@/santa/common/compRegistar';
@@ -12,6 +13,7 @@ class EditorStore {
   constructor(root) {
     this.siteStore = root.siteStore;
     this.cache = new Cache();
+    this.inspector = new Inspector();
   }
 
   edit(pageId) {
@@ -41,6 +43,8 @@ class EditorStore {
 
     const editPage = this.getEditPage(this.editPageId);
     editPage.addComponent(qmodel);
+
+    this.inspector.inspect(qmodel);
   }
 
   save() {

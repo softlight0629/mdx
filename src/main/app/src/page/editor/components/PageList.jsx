@@ -18,6 +18,10 @@ class PageList extends Component {
     this.props.editorStore.edit(pageId);
   }
 
+  handleAddPage() {
+    this.props.editorStore.newPage();
+  }
+
   render() {
     const pageList = this.props.siteStore.getPageList();
 
@@ -35,6 +39,12 @@ class PageList extends Component {
               })
             }
           </ul>
+          <div className="page-add-action">
+            <span onClick={() => this.handleAddPage()}>
+              <i className="leicon leicon-add"></i>
+              添加页面
+            </span>
+          </div>
         </div>
       </div>
     )

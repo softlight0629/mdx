@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import classNames from 'classnames';
-import MiDaXiuLogo from './components/MiDaXiuLogo';
+import LeLogo from './components/LeLogo';
 import Container from '../Layout/Container';
 import LoginAction from '../LoginAction';
 import UserHeadActions from './components/UserHeadActions';
@@ -32,7 +32,7 @@ class Head extends Component {
     return (
       <div className={headerCls}>
         <Container>
-          <MiDaXiuLogo />
+          <LeLogo />
           <div className="header-nav header-nav-right">
             <UserHeadActions 
               me={me}

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import classNames from 'classnames';
 import './logo.less';
 
-class MiDaXiuLogo extends Component {
+class LeLogo extends Component {
 
   render() {
     const logoCls = classNames({
@@ -12,11 +12,11 @@ class MiDaXiuLogo extends Component {
     return (
       <div className={logoCls}>
         <a href="/" className="logo-link">
-          <img src="https://gw.alipayobjects.com/zos/rmsportal/cptBhNjKeyaBDrfnMKwC.svg" className="image image-default"/>
+          <img src="" className="image image-default"/>
         </a>
       </div>
     )
   }
 }
 
-export default MiDaXiuLogo;
+export default LeLogo;

@@ -1,4 +1,4 @@
-const pages = {
+let pages = {
   'ykmlopm': {
     structure: {
       id: 'ykmlopm',
@@ -180,6 +180,67 @@ class SiteStore {
   getPageData(pageId) {
 
     return pages[pageId];
+  }
+
+  addNewPage() {
+    const pageId = Math.random().toString(36).substr(5);
+    pages = Object.assign({}, pages, {
+      [pageId]: {
+        structure: {
+          id: pageId,
+          type: 'Page',
+          title: '测试新增',
+          componentType: 'santa.core.components.QcPage',
+          components: [
+            {
+              type: 'Container',
+              componentType: 'santa.viewer.components.StContainer',
+              components: [
+                {
+                  componentType: 'santa.viewer.components.StList',
+                  type: 'Component',
+                  dataRef: 'data-yxsdas',
+                },
+              ]
+            },
+          ],
+          data: {
+            documentData: {
+              'data-yxsdas': {
+                listItems: [
+                  {
+                    title: '银行存款证明',
+                    img: 'https://gw.alipayobjects.com/zos/rmsportal/qnMZzTAViDGQHHjgyICm.png',
+                    label: '金融',
+                  },
+                  {
+                    title: '金币种信用卡',
+                    img: 'https://gw.alipayobjects.com/zos/rmsportal/qnMZzTAViDGQHHjgyICm.png',
+                    label: '信用卡',
+                  },
+                  {
+                    title: '信息产业潜力爆发',
+                    img: 'https://gw.alipayobjects.com/zos/rmsportal/qnMZzTAViDGQHHjgyICm.png',
+                    label: '留学',
+                  },
+                  {
+                    title: '移民顾问服务',
+                    img: 'https://gw.alipayobjects.com/zos/rmsportal/qnMZzTAViDGQHHjgyICm.png',
+                    label: '移民',
+                  },
+                ],
+              },
+            },
+            designData: {},
+            propertyData: {},
+          },
+        },
+      }
+    });
+
+    console.log(pages, 'asxsaxsa');
+
+    return pageId;
   }
 }
 

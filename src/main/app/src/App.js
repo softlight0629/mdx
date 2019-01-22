@@ -17,7 +17,6 @@ class App extends Component {
       r.forEach(route => routes.push(<Route exact={route.exact} path={route.path} component={route.component} />))
     });
 
-    console.log(routes);
     return (
       <div className="app">
         <Switch>

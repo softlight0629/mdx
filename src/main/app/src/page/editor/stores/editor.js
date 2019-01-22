@@ -49,6 +49,11 @@ class EditorStore {
     this.inspector.inspect(qmodel);
   }
 
+  newPage() {
+    const pageId = this.siteStore.addNewPage();
+    this.edit(pageId);
+  }
+
   save() {
     const allPages = this.cache.getAllPages();
     const json = {};

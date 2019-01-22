@@ -1,4 +1,3 @@
-import { get } from '@/util/request';
 import { observable } from 'mobx';
 import Account from '../model/account';
 import appData from '@/appData';

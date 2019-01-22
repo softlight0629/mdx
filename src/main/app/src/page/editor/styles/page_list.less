@@ -12,8 +12,13 @@
   }
 }
 
+.page-list-body {
+  height: 100%;
+}
+
 .page-list-body .list {
   padding-left: 0px;
+  height: calc(100% - 100px);
 }
 
 .page-list-title {
@@ -107,5 +112,26 @@
   &:hover .list-item-remove {
     opacity: 1;
     display: block;
+  }
+}
+
+.page-add-action {
+  color: rgba(0,0,0,.65);
+
+  span {
+    padding-top: 6px;
+    display: block;
+    margin: 0 40px;
+    height: 40px;
+    width: 168px;
+    border-radius: 40px;
+    text-align: center;
+    border: 1px solid rgba(0,0,0, .1);
+    cursor: pointer;
+
+    .leicon {
+      margin-right: 8px;
+      color: rgba(0,0,0,.65);
+    }
   }
 }

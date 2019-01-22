@@ -1,7 +1,6 @@
 /* eslint import/first:0 */
 import fetch from 'isomorphic-fetch';
 import { stringify } from 'query-string';
-// import getCtoken from './getCtoken';
 
 const formatError = (message, options) => {
   let resp;
@@ -69,7 +68,6 @@ export default function qrFetch(url, options = {}) {
   return fetch(url, opts)
     .then(res => parse(res, url, options), (error) => {
       const globalMessage = '网络异常';
-      // tracker.logError(error, globalMessage);
       throw formatError(globalMessage, options);
     });
 }

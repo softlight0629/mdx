@@ -5,7 +5,7 @@ import './index.less';
 
 export default [
   {
-    path: '/sites/:siteId/edit',
+    path: '/',
     component: Editor,
   }
 ]
